@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+    <link rel="stylesheet" href="/css/logout.css">
+</head>
+<body>
+    <header class="navbar">
+		<nav>
+			<ul>
+				<li><a href="/" th:href="@{/}">Home</a></li>
+				<li><a href="/dashboard">Dashboard</a></li>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/logout">Logout</a></li>
+				<li><a href="/register">Register</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/contact" th:href="@{/contact}">Contact</a></li>
+				<li><a href="/admin/home">Admin Only</a></li>
+			</ul>
+		</nav>
+    </header>
+		<div class="container">
+			<div class="card">
+			<h1 class="text-center">Logout</title>
+</head>
+<body>
+    <h1>You have been logged out successfully!</h1>
+    <p><a href="/login">Go to login page</a></p>
+</body>
+</html>

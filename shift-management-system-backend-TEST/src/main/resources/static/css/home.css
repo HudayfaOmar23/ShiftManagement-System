@@ -1,0 +1,80 @@
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: #90caf9;
+    background-color: rgba(144, 202, 249, 0.1);
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.home-banner {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: auto;
+}
+
+.welcome-message {
+    color: #90caf9;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.login-prompt {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}

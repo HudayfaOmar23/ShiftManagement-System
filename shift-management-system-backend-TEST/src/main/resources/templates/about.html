@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Our Company</title>
+    <link rel="stylesheet" href="/css/about.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+	       <nav>
+	           <ul>
+	               <li><a href="/" th:href="@{/}">Home</a></li>
+				<li><a href="/dashboard">Dashboard</a></li>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/logout">Logout</a></li>
+				<li><a href="/register">Register</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/contact" th:href="@{/contact}">Contact</a></li>
+				<li><a href="/admin/home">Admin Only</a></li>
+	           </ul>
+	       </nav>
+        <h1>About Our Company</h1>
+    </header>
+
+    <main>
+        <section class="about-intro">
+            <h2>Our Story</h2>
+            <p>Founded in 2024, Our Company is Dedicated To providing an Excellent Service To Its Customers and an Amazing Enviroment for Employees. The Company That Was Once Only 1 Person Has Grown To Well Over 1 Person....</p>
+        </section>
+
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>We strive to deliver innovative solutions that make a difference in people's lives while maintaining the highest standards of quality and customer service.</p>
+        </section>
+
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-card">
+                    <img th:src="@{/images/S.png}" alt="Team Member"a class="Team Member">
+                    <h3>Hudayfa Omar</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-card">
+                    <img th:src="@{/images/S.png}" alt="Team Member"a class="Team Member">
+                    <h3>Hudayfa Omar</h3>
+                    <p>CTO</p>
+                </div>
+                <div class="team-card">
+                    <img th:src="@{/images/S.png}" alt="Team Member"a class="Team Member">
+                    <h3>Omar Hudayfa</h3>
+                    <p>Marketing Director</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="values">
+            <h2>Our Values</h2>
+            <ul>
+                <li>Customer Focus</li>
+                <li>Innovation</li>
+                <li>Integrity</li>
+                <li>Teamwork</li>
+                <li>Sustainability</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Our Company. All rights reserved by Hudayfa Omar

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/employees.css">
+</head>
+<body>
+	<header>
+		<nav>
+				<ul>
+					<li><a href="/" th:href="@{/}">Home</a></li>
+					<li><a href="/dashboard">Dashboard</a></li>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href="/register">Register</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact" th:href="@{/contact}">Contact</a></li>
+					<li><a href="/admin/home">Admin Only</a></li>
+				</ul>
+			</nav>
+	    </header>
+		<div class="container">
+			<div class="card">
+			<h1 class="text-center">
+        <h1>Welcome, <span th:text="${user.username}"></span></h1>
+        
+        <h2>Your Shifts</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Shift Name</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="shift : ${shifts}">
+                    <td th:text="${shift.shiftName}"></td>
+                    <td th:text="${shift.shiftStart}"></td>
+                    <td th:text="${shift.shiftEnd}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

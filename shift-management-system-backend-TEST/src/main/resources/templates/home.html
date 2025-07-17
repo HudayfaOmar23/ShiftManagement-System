@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+	<p>Welcome, <span th:text="${username}"></span>!</p>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" th:href="@{/}">Home</a></li>
+				<li><a href="/dashboard">Dashboard</a></li>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/logout">Logout</a></li>
+				<li><a href="/register">Register</a></li>
+				<li><a href="/about"th:href="@{/about}">About</a></li>
+				<li><a href="/contact" th:href="@{/contact}">Contact</a></li>
+				<li><a href="/admin/home">Admin Only</a></li>
+            </ul>
+        </nav>
+    </header>
+	<main>
+        <h1>Welcome to the Home Page</h1>
+        <p>Thymeleaf is a great tool for integrating Java with HTML.</p>
+        <div>
+            <img th:src="@{/images/S.png}" alt="Home Banner" class="home-banner">
+        </div>
+		<div th:if="${username != null}">
+		    <h1>Welcome, <span th:text="${username}">User</span></h1>
+		</div>
+		<div th:if="${username == null}">
+		    <h1>Please log in to see your information.</h1>
+		</div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shift Management System</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

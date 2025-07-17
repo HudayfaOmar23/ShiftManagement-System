@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+    <link rel="stylesheet" href="/css/employees.css">
+</head>
+<body>
+	<header class="navbar">
+		<nav>
+				<ul>
+					<li><a href="/" th:href="@{/}">Home</a></li>
+					<li><a href="/dashboard">Dashboard</a></li>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href="/register">Register</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact" th:href="@{/contact}">Contact</a></li>
+					<li><a href="/admin/home">Admin Only</a></li>
+			    	</ul>
+				</nav>
+		    </header>
+		<div class="container">
+			<div class="card">
+			<h1 class="text-center">
+			<h1> List Employees </h1>
+		<div class = "row">
+		 <div class = "col-lg-3">
+		 	<a th:href = "@{/employee/new}" class = "btn btn-primary btn-sm mb-2">Add Employee</a>
+		</div>
+		<table class = "table table-striped table-bordered">
+			<thead class = "table-dark">
+				<tr>
+					<th> Employee First Name</th>
+					<th> Employee Last  Name</th>
+					<th> Employee Email</th>
+					<th> Employee Shifts</th>
+					<th> Actions</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each = "employee: ${employees}">
+					<td th:text = "${employee.firstName}"></td>
+					<td th:text = "${employee.lastName}"></td>
+					<td th:text = "${employee.email}"></td>
+					<td>
+						<a th:href = "@{/shifts}"
+						class = "btn btn-primary">Shifts</a>
+					</td> 
+					<td>
+						<a th:href = "@{/employee/edit/{id}(id=${employee.id})}"
+						class = "btn btn-primary">Update</a>
+						
+						<a th:href = "@{/employee/delete/{id}(id=${employee.id})}"
+						class = "btn btn-danger">Delete</a>
+					</td>
+				</tr>
+				
+			</tbody>
+			
+			
+		</table>
+</body>
+</html>

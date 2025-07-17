@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Employee</title>
+    <link rel="stylesheet" href="/css/create_shift.css">
+</head>
+<body>
+    <header class="navbar">
+		<nav>
+			    <ul>
+					<li><a href="/" th:href="@{/}">Home</a></li>
+					<li><a href="/dashboard">Dashboard</a></li>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/logout">Logout</a></li>
+					<li><a href="/register">Register</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact" th:href="@{/contact}">Contact</a></li>
+					<li><a href="/admin/home">Admin Only</a></li>
+				</ul>
+			</nav>
+    </header>
+		<div class="container">
+			<div class="card">
+					<h1 class="text-center"> Create New Shift</h1>
+					<div class="card-body">
+						<form th:action="@{/shifts}" th:object="${shift}" method="POST">
+							<div class="form-group">
+								<label>Shift Start Time</label>
+								<input type="text" name="shiftStart" th:field="*{shiftStart}" class="form-control" placeholder="Enter Shift Start Time" />
+							</div>
+							<div class="form-group">
+								<label>Shift End Time</label>
+								<input type="text" name="shiftEnd" th:field="*{shiftEnd}" class="form-control" placeholder="Enter Shift End Time" />
+							</div>
+							<div class="form-group">
+								<label>Shift Name</label>
+								<input type="text" name="shiftName" th:field="*{shiftName}" class="form-control" placeholder="Enter Shift Name" />
+							</div>
+							<div class="box-footer">
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
